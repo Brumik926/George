@@ -38,7 +38,7 @@ export default function PaymentScreen() {
     setIsSubmitting(true);
     try {
       const transaction = await addTransfer({ recipient, iban, amount: numericAmount, note });
-      Alert.alert('Demo platba odoslaná', `Zostatok sa znížil o ${formatMoney(transaction.amount)}.`, [
+      Alert.alert('Platba odoslaná', `Zostatok sa znížil o ${formatMoney(transaction.amount)}.`, [
         { text: 'Zobraziť potvrdenie', onPress: () => router.replace(`/transaction/${transaction.id}`) },
       ]);
     } catch (submitError) {
@@ -60,7 +60,7 @@ export default function PaymentScreen() {
             <Feather name="arrow-left" size={24} color={colors.foreground} />
           </Pressable>
           <View style={styles.headerTitleGroup}>
-            <Text style={[styles.eyebrow, { color: colors.mutedForeground }]}>DEMO ÚČET</Text>
+            <Text style={[styles.eyebrow, { color: colors.mutedForeground }]}>ÚČET</Text>
             <Text style={[styles.heading, { color: colors.foreground }]}>Nová platba</Text>
           </View>
           <View style={{ width: 24 }} />
@@ -154,7 +154,7 @@ export default function PaymentScreen() {
         >
           {isSubmitting ? <ActivityIndicator color={colors.primaryForeground} /> : <Feather name="send" size={18} color={colors.primaryForeground} />}
           <Text style={[styles.submitText, { color: colors.primaryForeground }]}>
-            {isSubmitting ? 'Spracúvam…' : 'Odoslať demo platbu'}
+            {isSubmitting ? 'Spracúvam…' : 'Odoslať platbu'}
           </Text>
         </Pressable>
       </KeyboardAwareScrollViewCompat>

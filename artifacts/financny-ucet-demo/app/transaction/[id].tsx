@@ -29,7 +29,7 @@ function receiptHtml(transaction: Transaction) {
         body { font-family: Arial, sans-serif; color: #12213a; padding: 36px; }
         .top { color: #2368e8; font-size: 13px; font-weight: bold; letter-spacing: 2px; }
         h1 { font-size: 27px; margin: 18px 0 6px; }
-        .demo { display: inline-block; background: #eaf1ff; color: #2368e8; border-radius: 20px; padding: 7px 11px; font-size: 12px; font-weight: bold; }
+        .receiptBadge { display: inline-block; background: #eaf1ff; color: #2368e8; border-radius: 20px; padding: 7px 11px; font-size: 12px; font-weight: bold; }
         .amount { font-size: 30px; font-weight: bold; color: #2368e8; margin: 28px 0; }
         .line { border-top: 1px solid #dce5f3; padding: 15px 0; }
         .label { color: #6c7b96; font-size: 11px; margin-bottom: 5px; }
@@ -37,14 +37,14 @@ function receiptHtml(transaction: Transaction) {
         .warning { margin-top: 26px; padding: 14px; background: #fff1f3; color: #a22d43; border-radius: 10px; font-size: 12px; }
       </style></head>
       <body>
-        <div class="top">FINANČNÝ ÚČET DEMO</div>
+        <div class="top">FINANČNÝ ÚČET</div>
         <h1>Potvrdenie o pohybe</h1>
-        <span class="demo">VZOR · NEPLATNÝ DOKLAD</span>
+        <span class="receiptBadge">VZOR · NEPLATNÝ DOKLAD</span>
         <div class="amount">${sign}${formatMoney(transaction.amount)}</div>
         <div class="line"><div class="label">Príjemca / odosielateľ</div><div class="value">${transaction.title}</div></div>
-        <div class="line"><div class="label">Typ pohybu</div><div class="value">${transaction.kind === 'income' ? 'Prijatá demo platba' : 'Odoslaná demo platba'}</div></div>
+        <div class="line"><div class="label">Typ pohybu</div><div class="value">${transaction.kind === 'income' ? 'Prijatá platba' : 'Odoslaná platba'}</div></div>
         <div class="line"><div class="label">Dátum spracovania</div><div class="value">${formatDateTime(transaction.date)}</div></div>
-        ${transaction.iban ? `<div class="line"><div class="label">Demo IBAN</div><div class="value">${transaction.iban}</div></div>` : ''}
+        ${transaction.iban ? `<div class="line"><div class="label">IBAN príjemcu</div><div class="value">${transaction.iban}</div></div>` : ''}
         ${transaction.note ? `<div class="line"><div class="label">Poznámka</div><div class="value">${transaction.note}</div></div>` : ''}
         <div class="warning">Tento dokument je iba vizuálny prototyp. Nie je potvrdením skutočnej bankovej transakcie a nemá účtovnú ani právnu platnosť.</div>
       </body>
@@ -88,15 +88,15 @@ export default function TransactionDetailScreen() {
         const url = web.URL.createObjectURL(blob);
         const anchor = web.document.createElement('a');
         anchor.href = url;
-        anchor.download = `potvrdenie-demo-${transaction.id}.html`;
+        anchor.download = `potvrdenie-${transaction.id}.html`;
         anchor.click();
         web.URL.revokeObjectURL(url);
       } else {
         const { uri } = await Print.printToFileAsync({ html });
         if (await Sharing.isAvailableAsync()) {
-          await Sharing.shareAsync(uri, { mimeType: 'application/pdf', dialogTitle: 'Potvrdenie demo platby' });
+          await Sharing.shareAsync(uri, { mimeType: 'application/pdf', dialogTitle: 'Potvrdenie platby' });
         } else {
-          await Share.share({ message: `Demo potvrdenie: ${transaction.title} ${formatMoney(transaction.amount)}` });
+          await Share.share({ message: `Potvrdenie: ${transaction.title} ${formatMoney(transaction.amount)}` });
         }
       }
       Alert.alert('Potvrdenie pripravené', 'Súbor je označený ako VZOR a nemá platnosť bankového dokladu.');
@@ -130,7 +130,7 @@ export default function TransactionDetailScreen() {
             {isIncome ? '+' : '−'}{formatMoney(transaction.amount)}
           </Text>
           <View style={[styles.demoPill, { backgroundColor: colors.secondary }]}>
-            <Text style={[styles.demoPillText, { color: colors.primary }]}>DEMO · NEPLATNÁ TRANSAKCIA</Text>
+            <Text style={[styles.demoPillText, { color: colors.primary }]}>VZOR · NEPLATNÁ TRANSAKCIA</Text>
           </View>
         </View>
 
@@ -138,7 +138,7 @@ export default function TransactionDetailScreen() {
           <InfoRow label="Popis pohybu" value={transaction.subtitle} colors={colors} />
           <InfoRow label="Kategória" value={transaction.category} colors={colors} />
           <InfoRow label="Dátum spracovania" value={formatDateTime(transaction.date)} colors={colors} />
-          {transaction.iban ? <InfoRow label="Demo IBAN príjemcu" value={transaction.iban} colors={colors} /> : null}
+          {transaction.iban ? <InfoRow label="IBAN príjemcu" value={transaction.iban} colors={colors} /> : null}
           {transaction.note ? <InfoRow label="Poznámka" value={transaction.note} colors={colors} /> : null}
         </View>
 

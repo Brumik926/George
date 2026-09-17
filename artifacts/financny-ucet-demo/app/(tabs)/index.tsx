@@ -86,7 +86,7 @@ export default function HomeScreen() {
           </View>
           <View style={[styles.demoBadge, { backgroundColor: colors.secondary }]}>
             <View style={[styles.demoDot, { backgroundColor: colors.primary }]} />
-            <Text style={[styles.demoLabel, { color: colors.primary }]}>DEMO</Text>
+            <Text style={[styles.demoLabel, { color: colors.mutedForeground }]}>PROTOTYP</Text>
           </View>
         </View>
 
@@ -101,7 +101,7 @@ export default function HomeScreen() {
             </View>
           </View>
           <View style={styles.balanceFooter}>
-            <Text style={styles.accountLabel}>Demo účet · •••• 4821</Text>
+            <Text style={styles.accountLabel}>Účet · •••• 4821</Text>
             <Text style={styles.accountLabel}>EUR</Text>
           </View>
         </View>
@@ -134,7 +134,7 @@ export default function HomeScreen() {
         <View style={[styles.notice, { backgroundColor: colors.secondary }]}>
           <Ionicons name="shield-checkmark-outline" size={20} color={colors.primary} />
           <Text style={[styles.noticeText, { color: colors.secondaryForeground }]}>
-            Toto je bezpečný finančný prototyp. Platby sa neposielajú do bankového systému.
+            Platby sa neposielajú do bankového systému.
           </Text>
         </View>
 

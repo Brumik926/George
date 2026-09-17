@@ -13,7 +13,6 @@ export interface Transaction {
   date: string;
   iban?: string;
   note?: string;
-  isDemo?: boolean;
 }
 
 interface AccountSnapshot {
@@ -37,7 +36,7 @@ const initialTransactions: Transaction[] = [
   {
     id: 'income-salary',
     title: 'Príjem na účet',
-    subtitle: 'Demo zamestnávateľ',
+    subtitle: 'Zamestnávateľ',
     amount: 2450,
     kind: 'income',
     category: 'Príjem',
@@ -55,7 +54,7 @@ const initialTransactions: Transaction[] = [
   {
     id: 'expense-subscription',
     title: 'Predplatné',
-    subtitle: 'Streamio Demo',
+    subtitle: 'Streamio',
     amount: 8.99,
     kind: 'expense',
     category: 'Služby',
@@ -121,23 +120,22 @@ export function AccountProvider({ children }: { children: ReactNode }) {
       throw new Error('Zadajte platnú sumu.');
     }
     if (input.amount > balance) {
-      throw new Error('Suma prevyšuje dostupný demo zostatok.');
+      throw new Error('Suma prevyšuje dostupný zostatok.');
     }
     if (!input.recipient.trim() || input.iban.trim().length < 8) {
-      throw new Error('Doplňte meno príjemcu a platný demo IBAN.');
+      throw new Error('Doplňte meno príjemcu a platný IBAN.');
     }
 
     const transaction: Transaction = {
       id: `transfer-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
       title: input.recipient.trim(),
-      subtitle: 'Odoslaná demo platba',
+      subtitle: 'Odoslaná platba',
       amount: input.amount,
       kind: 'expense',
       category: 'Prevod',
       date: new Date().toISOString(),
       iban: input.iban.trim().toUpperCase(),
-      note: input.note.trim() || 'Demo prevod bez poznámky',
-      isDemo: true,
+      note: input.note.trim() || 'Prevod bez poznámky',
     };
     const nextBalance = Number((balance - input.amount).toFixed(2));
     const nextTransactions = [transaction, ...transactions];

@@ -1,4 +1,4 @@
-# Finančný účet DEMO
+# Finančný účet
 
 Bezpečná mobilná ukážka osobného finančného účtu s lokálnymi demo prevodmi a históriou pohybov.
 
@@ -23,7 +23,7 @@ Bezpečná mobilná ukážka osobného finančného účtu s lokálnymi demo pre
 ## Where things live
 
 - `artifacts/financny-ucet-demo/app/` — Expo Router obrazovky pre prehľad, aktivity, platbu a detail pohybu.
-- `artifacts/financny-ucet-demo/context/AccountContext.tsx` — lokálny demo stav účtu a AsyncStorage perzistencia.
+- `artifacts/financny-ucet-demo/context/AccountContext.tsx` — lokálny stav účtu a AsyncStorage perzistencia.
 - `artifacts/financny-ucet-demo/constants/colors.ts` — svetlá a tmavá modro-biela farebná paleta.
 
 ## Architecture decisions
@@ -34,7 +34,7 @@ Bezpečná mobilná ukážka osobného finančného účtu s lokálnymi demo pre
 
 ## Product
 
-Používateľ vidí demo zostatok, prijaté platby a výdavky za aktuálny mesiac, môže vytvoriť simulovaný prevod s validáciou a stiahnuť neplatné vzorové potvrdenie.
+Používateľ vidí zostatok, prijaté platby a výdavky za aktuálny mesiac, môže vytvoriť simulovaný prevod s validáciou a stiahnuť neplatné vzorové potvrdenie.
 
 ## User preferences
 
