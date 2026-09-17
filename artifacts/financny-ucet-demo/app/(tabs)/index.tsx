@@ -84,10 +84,19 @@ export default function HomeScreen() {
             <Text style={[styles.eyebrow, { color: colors.mutedForeground }]}>OSOBNÉ FINANCIE</Text>
             <Text style={[styles.greeting, { color: colors.foreground }]}>Dobrý deň, Jakub</Text>
           </View>
-          <View style={[styles.demoBadge, { backgroundColor: colors.secondary }]}>
+          <Pressable
+            onPress={() => router.push('/profile')}
+            testID="profile-button"
+            accessibilityRole="button"
+            accessibilityLabel="Otvoriť profil"
+            style={({ pressed }) => [
+              styles.demoBadge,
+              { backgroundColor: colors.secondary, opacity: pressed ? 0.64 : 1 },
+            ]}
+          >
             <View style={[styles.demoDot, { backgroundColor: colors.primary }]} />
             <Text style={[styles.demoLabel, { color: colors.mutedForeground }]}>JV</Text>
-          </View>
+          </Pressable>
         </View>
 
         <View style={[styles.balanceCard, { backgroundColor: colors.primary }]}>
