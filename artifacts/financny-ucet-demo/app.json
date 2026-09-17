@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Finančný účet DEMO",
-    "slug": "financny-ucet-demo",
+    "name": "George",
+    "slug": "george",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "financny-ucet-demo",
+    "scheme": "george",
     "userInterfaceStyle": "automatic",
     "splash": {
       "backgroundColor": "#f5f8ff",
@@ -13,9 +13,12 @@
       "resizeMode": "contain"
     },
     "ios": {
-      "supportsTablet": false
+      "supportsTablet": false,
+      "bundleIdentifier": "com.george.app"
     },
-    "android": {},
+    "android": {
+      "package": "com.george.app"
+    },
     "web": {
       "favicon": "./assets/images/icon.png"
     },
