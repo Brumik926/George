@@ -1,6 +1,6 @@
-# [Project name]
+# Finančný účet DEMO
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Bezpečná mobilná ukážka osobného finančného účtu s lokálnymi demo prevodmi a históriou pohybov.
 
 ## Run & Operate
 
@@ -22,23 +22,27 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/financny-ucet-demo/app/` — Expo Router obrazovky pre prehľad, aktivity, platbu a detail pohybu.
+- `artifacts/financny-ucet-demo/context/AccountContext.tsx` — lokálny demo stav účtu a AsyncStorage perzistencia.
+- `artifacts/financny-ucet-demo/constants/colors.ts` — svetlá a tmavá modro-biela farebná paleta.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Demo prevody zostávajú výhradne lokálne a nikdy nevolajú bankový ani platobný systém.
+- Potvrdenia sa exportujú ako lokálne PDF/HTML súbory a vždy obsahujú označenie VZOR / NEPLATNÝ DOKLAD.
+- Zostatok a história sa ukladajú cez AsyncStorage, aby demo správanie pretrvalo medzi spusteniami.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Používateľ vidí demo zostatok, prijaté platby a výdavky za aktuálny mesiac, môže vytvoriť simulovaný prevod s validáciou a stiahnuť neplatné vzorové potvrdenie.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Vizuál má vychádzať zo štruktúry dodaných mobilných bankových obrazoviek, ale bez imitácie skutočnej bankovej identity.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Aplikácia je zámerne označená ako DEMO; nemeníť texty, ktoré vysvetľujú, že platby nie sú skutočné.
 
 ## Pointers
 
