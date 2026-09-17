@@ -86,7 +86,7 @@ export default function HomeScreen() {
           </View>
           <View style={[styles.demoBadge, { backgroundColor: colors.secondary }]}>
             <View style={[styles.demoDot, { backgroundColor: colors.primary }]} />
-            <Text style={[styles.demoLabel, { color: colors.mutedForeground }]}>PROTOTYP</Text>
+            <Text style={[styles.demoLabel, { color: colors.mutedForeground }]}>JV</Text>
           </View>
         </View>
 

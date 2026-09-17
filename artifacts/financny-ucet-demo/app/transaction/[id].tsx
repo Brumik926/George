@@ -46,7 +46,7 @@ function receiptHtml(transaction: Transaction) {
         <div class="line"><div class="label">Dátum spracovania</div><div class="value">${formatDateTime(transaction.date)}</div></div>
         ${transaction.iban ? `<div class="line"><div class="label">IBAN príjemcu</div><div class="value">${transaction.iban}</div></div>` : ''}
         ${transaction.note ? `<div class="line"><div class="label">Poznámka</div><div class="value">${transaction.note}</div></div>` : ''}
-        <div class="warning">Tento dokument je iba vizuálny prototyp. Nie je potvrdením skutočnej bankovej transakcie a nemá účtovnú ani právnu platnosť.</div>
+        <div class="warning">Tento dokument je iba vizuálna ukážka. Nie je potvrdením skutočnej bankovej transakcie a nemá účtovnú ani právnu platnosť.</div>
       </body>
     </html>
   `;
