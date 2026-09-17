@@ -1,6 +1,6 @@
-# Finančný účet
+# JV
 
-Bezpečná mobilná ukážka osobného finančného účtu s lokálnymi demo prevodmi a históriou pohybov.
+Bezpečná mobilná ukážka osobného finančného účtu s lokálnymi prevodmi a históriou pohybov.
 
 ## Run & Operate
 
@@ -34,16 +34,12 @@ Bezpečná mobilná ukážka osobného finančného účtu s lokálnymi demo pre
 
 ## Product
 
-Používateľ vidí zostatok, prijaté platby a výdavky za aktuálny mesiac, môže vytvoriť simulovaný prevod s validáciou a stiahnuť neplatné vzorové potvrdenie.
+Používateľ vidí zostatok, prijaté platby a výdavky za aktuálny mesiac, môže vytvoriť simulovaný prevod s validáciou a stiahnuť potvrdenie.
 
 ## User preferences
 
-- Vizuál má vychádzať zo štruktúry dodaných mobilných bankových obrazoviek, ale bez imitácie skutočnej bankovej identity.
-
-## Gotchas
-
-- Aplikácia je zámerne označená ako DEMO; nemeníť texty, ktoré vysvetľujú, že platby nie sú skutočné.
-
+- Vizuál má vychádzať zo štruktúry dodaných mobilných bankových obrazoviek, ale z imitáciou skutočnej bankovej identity.
+- 
 ## Pointers
 
 - See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details

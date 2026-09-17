@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Finančný účet",
-    "slug": "george",
+    "name": "JV",
+    "slug": "jv",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "george",
+    "scheme": "jv",
     "userInterfaceStyle": "automatic",
     "splash": {
       "backgroundColor": "#f5f8ff",

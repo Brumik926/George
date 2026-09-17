@@ -1,6 +1,6 @@
 kind = "mobile"
 previewPath = "/"
-title = "George"
+title = "JV"
 description = "Bezpečná mobilná demo aplikácia osobného účtu s modro-bielym vizuálom, simulovanými prevodmi, históriou príjmov a výdavkov a potvrdeniami označenými ako neplatný vzor."
 version = "1.0.0"
 id = "artifacts/financny-ucet-demo"
