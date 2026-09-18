@@ -52,6 +52,18 @@ const colors = {
     // Borders and input outlines
     border: '#dce5f3',
     input: '#d2dff4',
+
+    // Transaction detail surface (kept dark to match the payment reference)
+    detailBackground: '#111015',
+    detailCard: '#1f1f27',
+    detailSurface: '#1b1b23',
+    detailBorder: '#30303a',
+    detailForeground: '#f7f7fb',
+    detailMutedForeground: '#aaa8b4',
+    detailAccent: '#3b8fff',
+    detailHeroStart: '#bf0058',
+    detailHeroEnd: '#76003c',
+    detailHeroGlass: '#ffffff20',
   },
   dark: {
     text: '#f5f8ff',
@@ -75,6 +87,17 @@ const colors = {
     destructiveForeground: '#210912',
     border: '#273751',
     input: '#304466',
+
+    detailBackground: '#111015',
+    detailCard: '#1f1f27',
+    detailSurface: '#1b1b23',
+    detailBorder: '#30303a',
+    detailForeground: '#f7f7fb',
+    detailMutedForeground: '#aaa8b4',
+    detailAccent: '#3b8fff',
+    detailHeroStart: '#bf0058',
+    detailHeroEnd: '#76003c',
+    detailHeroGlass: '#ffffff20',
   },
 
   // Border radius (in px). Sync from the sibling web artifact's --radius

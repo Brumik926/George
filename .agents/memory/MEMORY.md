@@ -1,0 +1,1 @@
+- [Detail platby](transaction-detail-design.md) — detail odoslanej aj prijatej platby používa tmavý kartový dizajn s magenta hlavičkou podľa referenčných obrazoviek.
