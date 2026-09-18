@@ -129,9 +129,6 @@ export default function TransactionDetailScreen() {
           <Text style={[styles.transactionAmount, { color: isIncome ? colors.primary : colors.foreground }]}>
             {isIncome ? '+' : '−'}{formatMoney(transaction.amount)}
           </Text>
-          <View style={[styles.demoPill, { backgroundColor: colors.secondary }]}>
-            <Text style={[styles.demoPillText, { color: colors.primary }]}>VZOR · NEPLATNÁ TRANSAKCIA</Text>
-          </View>
         </View>
 
         <View style={[styles.infoCard, { backgroundColor: colors.card, borderColor: colors.border }]}>
@@ -160,7 +157,7 @@ export default function TransactionDetailScreen() {
         <View style={[styles.warning, { backgroundColor: colors.destructive + '14' }]}>
           <Ionicons name="warning-outline" size={20} color={colors.destructive} />
           <Text style={[styles.warningText, { color: colors.destructive }]}>
-            Potvrdenie je označené ako VZOR. Táto aplikácia nie je prepojená so žiadnou bankou.
+            Toto je lokálna ukážka. Aplikácia nie je prepojená so žiadnou bankou.
           </Text>
         </View>
       </ScrollView>
@@ -186,8 +183,6 @@ const styles = StyleSheet.create({
   transactionLogo: { alignItems: 'center', borderRadius: 20, height: 62, justifyContent: 'center', marginBottom: 14, width: 62 },
   transactionName: { fontFamily: 'Inter_700Bold', fontSize: 20, marginBottom: 7 },
   transactionAmount: { fontFamily: 'Inter_700Bold', fontSize: 29, letterSpacing: -0.5 },
-  demoPill: { borderRadius: 20, marginTop: 15, paddingHorizontal: 10, paddingVertical: 7 },
-  demoPillText: { fontFamily: 'Inter_700Bold', fontSize: 10, letterSpacing: 0.5 },
   infoCard: { borderRadius: 20, borderWidth: 1, marginBottom: 15, paddingHorizontal: 17 },
   infoRow: { borderBottomColor: 'rgba(120,145,185,0.18)', borderBottomWidth: 1, paddingVertical: 15 },
   infoLabel: { fontFamily: 'Inter_400Regular', fontSize: 12, marginBottom: 5 },

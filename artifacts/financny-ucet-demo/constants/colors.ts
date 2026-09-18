@@ -29,6 +29,9 @@ const colors = {
     // Primary action color (buttons, links, active states)
     primary: '#2368e8',
     primaryForeground: '#ffffff',
+    heroStart: '#b80063',
+    heroEnd: '#ed087e',
+    heroGlass: '#ffffff2b',
 
     // Secondary / less-emphasis interactive surfaces
     secondary: '#eaf1ff',
@@ -59,6 +62,9 @@ const colors = {
     cardForeground: '#f5f8ff',
     primary: '#63a1ff',
     primaryForeground: '#071021',
+    heroStart: '#780040',
+    heroEnd: '#b90060',
+    heroGlass: '#ffffff26',
     secondary: '#192944',
     secondaryForeground: '#d9e8ff',
     muted: '#1b263a',
