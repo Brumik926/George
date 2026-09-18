@@ -89,3 +89,6 @@ externalPort = 8080
 [[ports]]
 localPort = 8081
 externalPort = 8081
+
+[nix]
+packages = ["android-tools"]
