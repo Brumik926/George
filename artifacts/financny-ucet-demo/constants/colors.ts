@@ -15,43 +15,43 @@
 const colors = {
   light: {
     // Legacy aliases (kept for backward compatibility)
-    text: '#12213a',
-    tint: '#2368e8',
+    text: '#f7f7fb',
+    tint: '#3b8fff',
 
     // Core surfaces
-    background: '#f5f8ff',
-    foreground: '#12213a',
+    background: '#111015',
+    foreground: '#f7f7fb',
 
     // Cards / elevated surfaces
-    card: '#ffffff',
-    cardForeground: '#12213a',
+    card: '#1f1f27',
+    cardForeground: '#f7f7fb',
 
     // Primary action color (buttons, links, active states)
-    primary: '#2368e8',
+    primary: '#3b8fff',
     primaryForeground: '#ffffff',
-    heroStart: '#b80063',
-    heroEnd: '#ed087e',
-    heroGlass: '#ffffff2b',
+    heroStart: '#bf0058',
+    heroEnd: '#76003c',
+    heroGlass: '#ffffff20',
 
     // Secondary / less-emphasis interactive surfaces
-    secondary: '#eaf1ff',
-    secondaryForeground: '#173e83',
+    secondary: '#1b1b23',
+    secondaryForeground: '#f7f7fb',
 
     // Muted / subdued elements (dividers, timestamps, placeholders)
-    muted: '#edf2fb',
-    mutedForeground: '#6c7b96',
+    muted: '#1b1b23',
+    mutedForeground: '#aaa8b4',
 
     // Accent highlights (badges, selected items, focus rings)
-    accent: '#dce9ff',
-    accentForeground: '#173e83',
+    accent: '#2b2b36',
+    accentForeground: '#f7f7fb',
 
     // Destructive actions (delete, error states)
-    destructive: '#c93e57',
+    destructive: '#ff7187',
     destructiveForeground: '#ffffff',
 
     // Borders and input outlines
-    border: '#dce5f3',
-    input: '#d2dff4',
+    border: '#30303a',
+    input: '#3a3a46',
 
     // Transaction detail surface (kept dark to match the payment reference)
     detailBackground: '#111015',
